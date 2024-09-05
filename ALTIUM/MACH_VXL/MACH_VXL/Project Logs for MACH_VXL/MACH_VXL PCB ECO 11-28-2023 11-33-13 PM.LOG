@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=MACH_VXL Member=DS2
+Added Component: Designator=SW1(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=MACH_VXL Member=Component SW1 SW
+Added Room: Name=MACH_VXL

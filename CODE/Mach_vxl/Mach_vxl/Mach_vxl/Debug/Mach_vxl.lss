@@ -1,0 +1,1143 @@
+
+Mach_vxl.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000b4  00000000  00000000  000000f4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000000b4  000001b3  2**0
+                  ALLOC
+  2 .bss          00000027  00800060  00800060  000009ce  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  000009ce  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 0000002a  00000000  00000000  000009fd  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000f8  00000000  00000000  00000a27  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000124a  00000000  00000000  00000b1f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000732  00000000  00000000  00001d69  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000009a8  00000000  00000000  0000249b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000318  00000000  00000000  00002e44  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000001c1  00000000  00000000  0000315c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000084b  00000000  00000000  0000331d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000100  00000000  00000000  00003b68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000004  000008b4  000008b4  000009a8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00003c68  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .text.INT0_Init 00000056  00000676  00000676  0000076a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.INT1_Init 00000056  000006cc  000006cc  000007c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.Minimum 0000000c  000008a8  000008a8  0000099c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.ValuePosByTime 0000004c  00000772  00000772  00000866  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.UpdateTime 000000a4  00000436  00000436  0000052a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.UpdateSetTime 000000a4  000004da  000004da  000005ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.LED_init 0000001c  00000868  00000868  0000095c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.KEYPAD_init 00000022  00000846  00000846  0000093a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.Start   00000050  00000722  00000722  00000816  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.Display1LED 00000038  000007be  000007be  000008b2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.Display6LED 00000058  0000061e  0000061e  00000712  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.CheckKeypad 000001ba  000000c0  000000c0  000001b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.__vector_8 00000112  0000027a  0000027a  0000036e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.__vector_1 000000a0  0000057e  0000057e  00000672  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.__vector_2 000000aa  0000038c  0000038c  00000480  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.main    0000000e  0000089a  0000089a  0000098e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .data.KeyPad_data 00000018  00800087  000008c2  000009b6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 32 .progmemx.data.LED_database 0000000b  000000b4  000000b4  000001a8  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 33 .text.libgcc.div 00000028  000007f6  000007f6  000008ea  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.libgcc.div 00000028  0000081e  0000081e  00000912  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.__dummy_fini 00000002  000008bc  000008bc  000009b0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.__dummy_funcs_on_exit 00000002  000008be  000008be  000009b2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text.__dummy_simulator_exit 00000002  000008c0  000008c0  000009b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 38 .text.exit    00000016  00000884  00000884  00000978  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 39 .text._Exit   00000004  000008b8  000008b8  000009ac  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 30 00 	jmp	0x60	; 0x60 <__ctors_end>
+   4:	0c 94 bf 02 	jmp	0x57e	; 0x57e <__vector_1>
+   8:	0c 94 c6 01 	jmp	0x38c	; 0x38c <__vector_2>
+   c:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  10:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  14:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  18:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  1c:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  20:	0c 94 3d 01 	jmp	0x27a	; 0x27a <__vector_8>
+  24:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  28:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  2c:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  30:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  34:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  38:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  3c:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  40:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  44:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  48:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  4c:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+  50:	0c 94 5a 04 	jmp	0x8b4	; 0x8b4 <__bad_interrupt>
+
+00000054 <.dinit>:
+  54:	00 60       	ori	r16, 0x00	; 0
+  56:	00 87       	std	Z+8, r16	; 0x08
+  58:	80 00       	.word	0x0080	; ????
+  5a:	87 00       	.word	0x0087	; ????
+  5c:	9f 00       	.word	0x009f	; ????
+  5e:	08 c2       	rjmp	.+1040   	; 0x470 <__stack+0x11>
+
+00000060 <__ctors_end>:
+  60:	11 24       	eor	r1, r1
+  62:	1f be       	out	0x3f, r1	; 63
+  64:	cf e5       	ldi	r28, 0x5F	; 95
+  66:	d4 e0       	ldi	r29, 0x04	; 4
+  68:	de bf       	out	0x3e, r29	; 62
+  6a:	cd bf       	out	0x3d, r28	; 61
+
+0000006c <__do_copy_data>:
+  6c:	e4 e5       	ldi	r30, 0x54	; 84
+  6e:	f0 e0       	ldi	r31, 0x00	; 0
+  70:	40 e0       	ldi	r20, 0x00	; 0
+  72:	17 c0       	rjmp	.+46     	; 0xa2 <__do_clear_bss+0x8>
+  74:	b5 91       	lpm	r27, Z+
+  76:	a5 91       	lpm	r26, Z+
+  78:	35 91       	lpm	r19, Z+
+  7a:	25 91       	lpm	r18, Z+
+  7c:	05 91       	lpm	r16, Z+
+  7e:	07 fd       	sbrc	r16, 7
+  80:	0c c0       	rjmp	.+24     	; 0x9a <__do_clear_bss>
+  82:	95 91       	lpm	r25, Z+
+  84:	85 91       	lpm	r24, Z+
+  86:	ef 01       	movw	r28, r30
+  88:	f9 2f       	mov	r31, r25
+  8a:	e8 2f       	mov	r30, r24
+  8c:	05 90       	lpm	r0, Z+
+  8e:	0d 92       	st	X+, r0
+  90:	a2 17       	cp	r26, r18
+  92:	b3 07       	cpc	r27, r19
+  94:	d9 f7       	brne	.-10     	; 0x8c <__do_copy_data+0x20>
+  96:	fe 01       	movw	r30, r28
+  98:	04 c0       	rjmp	.+8      	; 0xa2 <__do_clear_bss+0x8>
+
+0000009a <__do_clear_bss>:
+  9a:	1d 92       	st	X+, r1
+  9c:	a2 17       	cp	r26, r18
+  9e:	b3 07       	cpc	r27, r19
+  a0:	e1 f7       	brne	.-8      	; 0x9a <__do_clear_bss>
+  a2:	e0 36       	cpi	r30, 0x60	; 96
+  a4:	f4 07       	cpc	r31, r20
+  a6:	31 f7       	brne	.-52     	; 0x74 <__do_copy_data+0x8>
+  a8:	0e 94 4d 04 	call	0x89a	; 0x89a <main>
+  ac:	0c 94 42 04 	jmp	0x884	; 0x884 <exit>
+
+000000b0 <_exit>:
+  b0:	f8 94       	cli
+
+000000b2 <__stop_program>:
+  b2:	ff cf       	rjmp	.-2      	; 0xb2 <__stop_program>
+
+Disassembly of section .text:
+
+000008b4 <__bad_interrupt>:
+ 8b4:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.INT0_Init:
+
+00000676 <INT0_Init>:
+}
+unsigned char UART_receive()
+{
+	while (!(UCSRA & (1 << RXC)));
+	return UDR;
+}
+ 676:	9c 01       	movw	r18, r24
+ 678:	91 b3       	in	r25, 0x11	; 17
+ 67a:	9b 7f       	andi	r25, 0xFB	; 251
+ 67c:	91 bb       	out	0x11, r25	; 17
+ 67e:	92 b3       	in	r25, 0x12	; 18
+ 680:	94 60       	ori	r25, 0x04	; 4
+ 682:	92 bb       	out	0x12, r25	; 18
+ 684:	9b b7       	in	r25, 0x3b	; 59
+ 686:	90 64       	ori	r25, 0x40	; 64
+ 688:	9b bf       	out	0x3b, r25	; 59
+ 68a:	9a b7       	in	r25, 0x3a	; 58
+ 68c:	90 64       	ori	r25, 0x40	; 64
+ 68e:	9a bf       	out	0x3a, r25	; 58
+ 690:	22 30       	cpi	r18, 0x02	; 2
+ 692:	31 05       	cpc	r19, r1
+ 694:	79 f0       	breq	.+30     	; 0x6b4 <INT0_Init+0x3e>
+ 696:	24 f4       	brge	.+8      	; 0x6a0 <INT0_Init+0x2a>
+ 698:	21 30       	cpi	r18, 0x01	; 1
+ 69a:	31 05       	cpc	r19, r1
+ 69c:	41 f0       	breq	.+16     	; 0x6ae <INT0_Init+0x38>
+ 69e:	08 95       	ret
+ 6a0:	23 30       	cpi	r18, 0x03	; 3
+ 6a2:	31 05       	cpc	r19, r1
+ 6a4:	59 f0       	breq	.+22     	; 0x6bc <INT0_Init+0x46>
+ 6a6:	24 30       	cpi	r18, 0x04	; 4
+ 6a8:	31 05       	cpc	r19, r1
+ 6aa:	61 f0       	breq	.+24     	; 0x6c4 <INT0_Init+0x4e>
+ 6ac:	08 95       	ret
+ 6ae:	85 b7       	in	r24, 0x35	; 53
+ 6b0:	85 bf       	out	0x35, r24	; 53
+ 6b2:	08 95       	ret
+ 6b4:	85 b7       	in	r24, 0x35	; 53
+ 6b6:	81 60       	ori	r24, 0x01	; 1
+ 6b8:	85 bf       	out	0x35, r24	; 53
+ 6ba:	08 95       	ret
+ 6bc:	85 b7       	in	r24, 0x35	; 53
+ 6be:	82 60       	ori	r24, 0x02	; 2
+ 6c0:	85 bf       	out	0x35, r24	; 53
+ 6c2:	08 95       	ret
+ 6c4:	85 b7       	in	r24, 0x35	; 53
+ 6c6:	83 60       	ori	r24, 0x03	; 3
+ 6c8:	85 bf       	out	0x35, r24	; 53
+ 6ca:	08 95       	ret
+
+Disassembly of section .text.INT1_Init:
+
+000006cc <INT1_Init>:
+ 6cc:	9c 01       	movw	r18, r24
+ 6ce:	91 b3       	in	r25, 0x11	; 17
+ 6d0:	97 7f       	andi	r25, 0xF7	; 247
+ 6d2:	91 bb       	out	0x11, r25	; 17
+ 6d4:	92 b3       	in	r25, 0x12	; 18
+ 6d6:	98 60       	ori	r25, 0x08	; 8
+ 6d8:	92 bb       	out	0x12, r25	; 18
+ 6da:	9b b7       	in	r25, 0x3b	; 59
+ 6dc:	90 68       	ori	r25, 0x80	; 128
+ 6de:	9b bf       	out	0x3b, r25	; 59
+ 6e0:	9a b7       	in	r25, 0x3a	; 58
+ 6e2:	90 68       	ori	r25, 0x80	; 128
+ 6e4:	9a bf       	out	0x3a, r25	; 58
+ 6e6:	22 30       	cpi	r18, 0x02	; 2
+ 6e8:	31 05       	cpc	r19, r1
+ 6ea:	79 f0       	breq	.+30     	; 0x70a <INT1_Init+0x3e>
+ 6ec:	24 f4       	brge	.+8      	; 0x6f6 <INT1_Init+0x2a>
+ 6ee:	21 30       	cpi	r18, 0x01	; 1
+ 6f0:	31 05       	cpc	r19, r1
+ 6f2:	41 f0       	breq	.+16     	; 0x704 <INT1_Init+0x38>
+ 6f4:	08 95       	ret
+ 6f6:	23 30       	cpi	r18, 0x03	; 3
+ 6f8:	31 05       	cpc	r19, r1
+ 6fa:	59 f0       	breq	.+22     	; 0x712 <INT1_Init+0x46>
+ 6fc:	24 30       	cpi	r18, 0x04	; 4
+ 6fe:	31 05       	cpc	r19, r1
+ 700:	61 f0       	breq	.+24     	; 0x71a <INT1_Init+0x4e>
+ 702:	08 95       	ret
+ 704:	85 b7       	in	r24, 0x35	; 53
+ 706:	85 bf       	out	0x35, r24	; 53
+ 708:	08 95       	ret
+ 70a:	85 b7       	in	r24, 0x35	; 53
+ 70c:	84 60       	ori	r24, 0x04	; 4
+ 70e:	85 bf       	out	0x35, r24	; 53
+ 710:	08 95       	ret
+ 712:	85 b7       	in	r24, 0x35	; 53
+ 714:	88 60       	ori	r24, 0x08	; 8
+ 716:	85 bf       	out	0x35, r24	; 53
+ 718:	08 95       	ret
+ 71a:	85 b7       	in	r24, 0x35	; 53
+ 71c:	8c 60       	ori	r24, 0x0C	; 12
+ 71e:	85 bf       	out	0x35, r24	; 53
+ 720:	08 95       	ret
+
+Disassembly of section .text.Minimum:
+
+000008a8 <Minimum>:
+int row,col;
+int mark;
+
+int Minimum(int a, int b)
+{
+	if(a>b)
+ 8a8:	68 17       	cp	r22, r24
+ 8aa:	79 07       	cpc	r23, r25
+ 8ac:	14 f4       	brge	.+4      	; 0x8b2 <Minimum+0xa>
+	return b;
+ 8ae:	86 2f       	mov	r24, r22
+ 8b0:	97 2f       	mov	r25, r23
+	else
+	return a;
+}
+ 8b2:	08 95       	ret
+
+Disassembly of section .text.ValuePosByTime:
+
+00000772 <ValuePosByTime>:
+ 772:	0f 93       	push	r16
+ 774:	1f 93       	push	r17
+ 776:	cf 93       	push	r28
+ 778:	df 93       	push	r29
+ 77a:	8b 01       	movw	r16, r22
+ 77c:	ea 01       	movw	r28, r20
+ 77e:	2a e0       	ldi	r18, 0x0A	; 10
+ 780:	30 e0       	ldi	r19, 0x00	; 0
+ 782:	b9 01       	movw	r22, r18
+ 784:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 788:	e5 e7       	ldi	r30, 0x75	; 117
+ 78a:	f0 e0       	ldi	r31, 0x00	; 0
+ 78c:	71 83       	std	Z+1, r23	; 0x01
+ 78e:	60 83       	st	Z, r22
+ 790:	93 83       	std	Z+3, r25	; 0x03
+ 792:	82 83       	std	Z+2, r24	; 0x02
+ 794:	c8 01       	movw	r24, r16
+ 796:	b9 01       	movw	r22, r18
+ 798:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 79c:	75 83       	std	Z+5, r23	; 0x05
+ 79e:	64 83       	std	Z+4, r22	; 0x04
+ 7a0:	97 83       	std	Z+7, r25	; 0x07
+ 7a2:	86 83       	std	Z+6, r24	; 0x06
+ 7a4:	ce 01       	movw	r24, r28
+ 7a6:	b9 01       	movw	r22, r18
+ 7a8:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 7ac:	71 87       	std	Z+9, r23	; 0x09
+ 7ae:	60 87       	std	Z+8, r22	; 0x08
+ 7b0:	93 87       	std	Z+11, r25	; 0x0b
+ 7b2:	82 87       	std	Z+10, r24	; 0x0a
+ 7b4:	df 91       	pop	r29
+ 7b6:	cf 91       	pop	r28
+ 7b8:	1f 91       	pop	r17
+ 7ba:	0f 91       	pop	r16
+ 7bc:	08 95       	ret
+
+Disassembly of section .text.UpdateTime:
+
+00000436 <UpdateTime>:
+ 436:	cf 93       	push	r28
+ 438:	df 93       	push	r29
+ 43a:	c5 e7       	ldi	r28, 0x75	; 117
+ 43c:	d0 e0       	ldi	r29, 0x00	; 0
+ 43e:	88 81       	ld	r24, Y
+ 440:	99 81       	ldd	r25, Y+1	; 0x01
+ 442:	bc 01       	movw	r22, r24
+ 444:	66 0f       	add	r22, r22
+ 446:	77 1f       	adc	r23, r23
+ 448:	88 0f       	add	r24, r24
+ 44a:	99 1f       	adc	r25, r25
+ 44c:	88 0f       	add	r24, r24
+ 44e:	99 1f       	adc	r25, r25
+ 450:	88 0f       	add	r24, r24
+ 452:	99 1f       	adc	r25, r25
+ 454:	86 0f       	add	r24, r22
+ 456:	97 1f       	adc	r25, r23
+ 458:	6a 81       	ldd	r22, Y+2	; 0x02
+ 45a:	7b 81       	ldd	r23, Y+3	; 0x03
+ 45c:	68 0f       	add	r22, r24
+ 45e:	79 1f       	adc	r23, r25
+ 460:	87 e1       	ldi	r24, 0x17	; 23
+ 462:	90 e0       	ldi	r25, 0x00	; 0
+ 464:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 468:	90 93 6e 00 	sts	0x006E, r25	; 0x80006e <hour+0x1>
+ 46c:	80 93 6d 00 	sts	0x006D, r24	; 0x80006d <hour>
+ 470:	8c 81       	ldd	r24, Y+4	; 0x04
+ 472:	9d 81       	ldd	r25, Y+5	; 0x05
+ 474:	bc 01       	movw	r22, r24
+ 476:	66 0f       	add	r22, r22
+ 478:	77 1f       	adc	r23, r23
+ 47a:	88 0f       	add	r24, r24
+ 47c:	99 1f       	adc	r25, r25
+ 47e:	88 0f       	add	r24, r24
+ 480:	99 1f       	adc	r25, r25
+ 482:	88 0f       	add	r24, r24
+ 484:	99 1f       	adc	r25, r25
+ 486:	86 0f       	add	r24, r22
+ 488:	97 1f       	adc	r25, r23
+ 48a:	6e 81       	ldd	r22, Y+6	; 0x06
+ 48c:	7f 81       	ldd	r23, Y+7	; 0x07
+ 48e:	68 0f       	add	r22, r24
+ 490:	79 1f       	adc	r23, r25
+ 492:	8b e3       	ldi	r24, 0x3B	; 59
+ 494:	90 e0       	ldi	r25, 0x00	; 0
+ 496:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 49a:	90 93 6c 00 	sts	0x006C, r25	; 0x80006c <minute+0x1>
+ 49e:	80 93 6b 00 	sts	0x006B, r24	; 0x80006b <minute>
+ 4a2:	88 85       	ldd	r24, Y+8	; 0x08
+ 4a4:	99 85       	ldd	r25, Y+9	; 0x09
+ 4a6:	bc 01       	movw	r22, r24
+ 4a8:	66 0f       	add	r22, r22
+ 4aa:	77 1f       	adc	r23, r23
+ 4ac:	88 0f       	add	r24, r24
+ 4ae:	99 1f       	adc	r25, r25
+ 4b0:	88 0f       	add	r24, r24
+ 4b2:	99 1f       	adc	r25, r25
+ 4b4:	88 0f       	add	r24, r24
+ 4b6:	99 1f       	adc	r25, r25
+ 4b8:	86 0f       	add	r24, r22
+ 4ba:	97 1f       	adc	r25, r23
+ 4bc:	6a 85       	ldd	r22, Y+10	; 0x0a
+ 4be:	7b 85       	ldd	r23, Y+11	; 0x0b
+ 4c0:	68 0f       	add	r22, r24
+ 4c2:	79 1f       	adc	r23, r25
+ 4c4:	8b e3       	ldi	r24, 0x3B	; 59
+ 4c6:	90 e0       	ldi	r25, 0x00	; 0
+ 4c8:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 4cc:	90 93 68 00 	sts	0x0068, r25	; 0x800068 <second+0x1>
+ 4d0:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <second>
+ 4d4:	df 91       	pop	r29
+ 4d6:	cf 91       	pop	r28
+ 4d8:	08 95       	ret
+
+Disassembly of section .text.UpdateSetTime:
+
+000004da <UpdateSetTime>:
+ 4da:	cf 93       	push	r28
+ 4dc:	df 93       	push	r29
+ 4de:	c5 e7       	ldi	r28, 0x75	; 117
+ 4e0:	d0 e0       	ldi	r29, 0x00	; 0
+ 4e2:	88 81       	ld	r24, Y
+ 4e4:	99 81       	ldd	r25, Y+1	; 0x01
+ 4e6:	bc 01       	movw	r22, r24
+ 4e8:	66 0f       	add	r22, r22
+ 4ea:	77 1f       	adc	r23, r23
+ 4ec:	88 0f       	add	r24, r24
+ 4ee:	99 1f       	adc	r25, r25
+ 4f0:	88 0f       	add	r24, r24
+ 4f2:	99 1f       	adc	r25, r25
+ 4f4:	88 0f       	add	r24, r24
+ 4f6:	99 1f       	adc	r25, r25
+ 4f8:	86 0f       	add	r24, r22
+ 4fa:	97 1f       	adc	r25, r23
+ 4fc:	6a 81       	ldd	r22, Y+2	; 0x02
+ 4fe:	7b 81       	ldd	r23, Y+3	; 0x03
+ 500:	68 0f       	add	r22, r24
+ 502:	79 1f       	adc	r23, r25
+ 504:	87 e1       	ldi	r24, 0x17	; 23
+ 506:	90 e0       	ldi	r25, 0x00	; 0
+ 508:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 50c:	90 93 72 00 	sts	0x0072, r25	; 0x800072 <setHour+0x1>
+ 510:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <setHour>
+ 514:	8c 81       	ldd	r24, Y+4	; 0x04
+ 516:	9d 81       	ldd	r25, Y+5	; 0x05
+ 518:	bc 01       	movw	r22, r24
+ 51a:	66 0f       	add	r22, r22
+ 51c:	77 1f       	adc	r23, r23
+ 51e:	88 0f       	add	r24, r24
+ 520:	99 1f       	adc	r25, r25
+ 522:	88 0f       	add	r24, r24
+ 524:	99 1f       	adc	r25, r25
+ 526:	88 0f       	add	r24, r24
+ 528:	99 1f       	adc	r25, r25
+ 52a:	86 0f       	add	r24, r22
+ 52c:	97 1f       	adc	r25, r23
+ 52e:	6e 81       	ldd	r22, Y+6	; 0x06
+ 530:	7f 81       	ldd	r23, Y+7	; 0x07
+ 532:	68 0f       	add	r22, r24
+ 534:	79 1f       	adc	r23, r25
+ 536:	8b e3       	ldi	r24, 0x3B	; 59
+ 538:	90 e0       	ldi	r25, 0x00	; 0
+ 53a:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 53e:	90 93 6a 00 	sts	0x006A, r25	; 0x80006a <setMinute+0x1>
+ 542:	80 93 69 00 	sts	0x0069, r24	; 0x800069 <setMinute>
+ 546:	88 85       	ldd	r24, Y+8	; 0x08
+ 548:	99 85       	ldd	r25, Y+9	; 0x09
+ 54a:	bc 01       	movw	r22, r24
+ 54c:	66 0f       	add	r22, r22
+ 54e:	77 1f       	adc	r23, r23
+ 550:	88 0f       	add	r24, r24
+ 552:	99 1f       	adc	r25, r25
+ 554:	88 0f       	add	r24, r24
+ 556:	99 1f       	adc	r25, r25
+ 558:	88 0f       	add	r24, r24
+ 55a:	99 1f       	adc	r25, r25
+ 55c:	86 0f       	add	r24, r22
+ 55e:	97 1f       	adc	r25, r23
+ 560:	6a 85       	ldd	r22, Y+10	; 0x0a
+ 562:	7b 85       	ldd	r23, Y+11	; 0x0b
+ 564:	68 0f       	add	r22, r24
+ 566:	79 1f       	adc	r23, r25
+ 568:	8b e3       	ldi	r24, 0x3B	; 59
+ 56a:	90 e0       	ldi	r25, 0x00	; 0
+ 56c:	0e 94 54 04 	call	0x8a8	; 0x8a8 <Minimum>
+ 570:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 574:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 578:	df 91       	pop	r29
+ 57a:	cf 91       	pop	r28
+ 57c:	08 95       	ret
+
+Disassembly of section .text.LED_init:
+
+00000868 <LED_init>:
+ 868:	84 e0       	ldi	r24, 0x04	; 4
+ 86a:	8e bd       	out	0x2e, r24	; 46
+ 86c:	89 bf       	out	0x39, r24	; 57
+ 86e:	85 e8       	ldi	r24, 0x85	; 133
+ 870:	8d bd       	out	0x2d, r24	; 45
+ 872:	8d ee       	ldi	r24, 0xED	; 237
+ 874:	8c bd       	out	0x2c, r24	; 44
+ 876:	78 94       	sei
+ 878:	8f ef       	ldi	r24, 0xFF	; 255
+ 87a:	8a bb       	out	0x1a, r24	; 26
+ 87c:	87 bb       	out	0x17, r24	; 23
+ 87e:	1b ba       	out	0x1b, r1	; 27
+ 880:	88 bb       	out	0x18, r24	; 24
+ 882:	08 95       	ret
+
+Disassembly of section .text.KEYPAD_init:
+
+00000846 <KEYPAD_init>:
+ 846:	8f e0       	ldi	r24, 0x0F	; 15
+ 848:	84 bb       	out	0x14, r24	; 20
+ 84a:	8f ef       	ldi	r24, 0xFF	; 255
+ 84c:	85 bb       	out	0x15, r24	; 21
+ 84e:	84 e0       	ldi	r24, 0x04	; 4
+ 850:	90 e0       	ldi	r25, 0x00	; 0
+ 852:	0e 94 3b 03 	call	0x676	; 0x676 <INT0_Init>
+ 856:	84 e0       	ldi	r24, 0x04	; 4
+ 858:	90 e0       	ldi	r25, 0x00	; 0
+ 85a:	0e 94 66 03 	call	0x6cc	; 0x6cc <INT1_Init>
+ 85e:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <IsPause>
+ 862:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <IsSetTime>
+ 866:	08 95       	ret
+
+Disassembly of section .text.Start:
+
+00000722 <Start>:
+ 722:	10 92 6e 00 	sts	0x006E, r1	; 0x80006e <hour+0x1>
+ 726:	10 92 6d 00 	sts	0x006D, r1	; 0x80006d <hour>
+ 72a:	10 92 6c 00 	sts	0x006C, r1	; 0x80006c <minute+0x1>
+ 72e:	10 92 6b 00 	sts	0x006B, r1	; 0x80006b <minute>
+ 732:	10 92 68 00 	sts	0x0068, r1	; 0x800068 <second+0x1>
+ 736:	10 92 67 00 	sts	0x0067, r1	; 0x800067 <second>
+ 73a:	10 92 72 00 	sts	0x0072, r1	; 0x800072 <setHour+0x1>
+ 73e:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <setHour>
+ 742:	10 92 6a 00 	sts	0x006A, r1	; 0x80006a <setMinute+0x1>
+ 746:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <setMinute>
+ 74a:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 74e:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 752:	40 e0       	ldi	r20, 0x00	; 0
+ 754:	50 e0       	ldi	r21, 0x00	; 0
+ 756:	60 e0       	ldi	r22, 0x00	; 0
+ 758:	70 e0       	ldi	r23, 0x00	; 0
+ 75a:	80 e0       	ldi	r24, 0x00	; 0
+ 75c:	90 e0       	ldi	r25, 0x00	; 0
+ 75e:	0e 94 b9 03 	call	0x772	; 0x772 <ValuePosByTime>
+ 762:	0e 94 34 04 	call	0x868	; 0x868 <LED_init>
+ 766:	0e 94 23 04 	call	0x846	; 0x846 <KEYPAD_init>
+ 76a:	81 b3       	in	r24, 0x11	; 17
+ 76c:	80 61       	ori	r24, 0x10	; 16
+ 76e:	81 bb       	out	0x11, r24	; 17
+ 770:	08 95       	ret
+
+Disassembly of section .text.Display1LED:
+
+000007be <Display1LED>:
+ 7be:	ac 01       	movw	r20, r24
+ 7c0:	41 50       	subi	r20, 0x01	; 1
+ 7c2:	51 09       	sbc	r21, r1
+ 7c4:	21 e0       	ldi	r18, 0x01	; 1
+ 7c6:	30 e0       	ldi	r19, 0x00	; 0
+ 7c8:	02 c0       	rjmp	.+4      	; 0x7ce <Display1LED+0x10>
+ 7ca:	22 0f       	add	r18, r18
+ 7cc:	33 1f       	adc	r19, r19
+ 7ce:	4a 95       	dec	r20
+ 7d0:	e2 f7       	brpl	.-8      	; 0x7ca <Display1LED+0xc>
+ 7d2:	20 95       	com	r18
+ 7d4:	28 bb       	out	0x18, r18	; 24
+ 7d6:	6b bb       	out	0x1b, r22	; 27
+ 7d8:	80 fd       	sbrc	r24, 0
+ 7da:	03 c0       	rjmp	.+6      	; 0x7e2 <Display1LED+0x24>
+ 7dc:	8b b3       	in	r24, 0x1b	; 27
+ 7de:	80 68       	ori	r24, 0x80	; 128
+ 7e0:	8b bb       	out	0x1b, r24	; 27
+ 7e2:	8f ec       	ldi	r24, 0xCF	; 207
+ 7e4:	97 e0       	ldi	r25, 0x07	; 7
+ 7e6:	01 97       	sbiw	r24, 0x01	; 1
+ 7e8:	f1 f7       	brne	.-4      	; 0x7e6 <Display1LED+0x28>
+ 7ea:	00 c0       	rjmp	.+0      	; 0x7ec <Display1LED+0x2e>
+ 7ec:	00 00       	nop
+ 7ee:	8f ef       	ldi	r24, 0xFF	; 255
+ 7f0:	88 bb       	out	0x18, r24	; 24
+ 7f2:	1b ba       	out	0x1b, r1	; 27
+ 7f4:	08 95       	ret
+
+Disassembly of section .text.Display6LED:
+
+0000061e <Display6LED>:
+ 61e:	81 e0       	ldi	r24, 0x01	; 1
+ 620:	90 e0       	ldi	r25, 0x00	; 0
+ 622:	90 93 65 00 	sts	0x0065, r25	; 0x800065 <LED_pos+0x1>
+ 626:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <LED_pos>
+ 62a:	1d c0       	rjmp	.+58     	; 0x666 <Display6LED+0x48>
+ 62c:	fc 01       	movw	r30, r24
+ 62e:	31 97       	sbiw	r30, 0x01	; 1
+ 630:	ee 0f       	add	r30, r30
+ 632:	ff 1f       	adc	r31, r31
+ 634:	eb 58       	subi	r30, 0x8B	; 139
+ 636:	ff 4f       	sbci	r31, 0xFF	; 255
+ 638:	20 81       	ld	r18, Z
+ 63a:	31 81       	ldd	r19, Z+1	; 0x01
+ 63c:	03 2e       	mov	r0, r19
+ 63e:	00 0c       	add	r0, r0
+ 640:	44 0b       	sbc	r20, r20
+ 642:	2c 54       	subi	r18, 0x4C	; 76
+ 644:	3f 4f       	sbci	r19, 0xFF	; 255
+ 646:	4f 4f       	sbci	r20, 0xFF	; 255
+ 648:	f9 01       	movw	r30, r18
+ 64a:	64 91       	lpm	r22, Z
+ 64c:	47 fd       	sbrc	r20, 7
+ 64e:	60 81       	ld	r22, Z
+ 650:	0e 94 df 03 	call	0x7be	; 0x7be <Display1LED>
+ 654:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <LED_pos>
+ 658:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <LED_pos+0x1>
+ 65c:	01 96       	adiw	r24, 0x01	; 1
+ 65e:	90 93 65 00 	sts	0x0065, r25	; 0x800065 <LED_pos+0x1>
+ 662:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <LED_pos>
+ 666:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <LED_pos>
+ 66a:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <LED_pos+0x1>
+ 66e:	87 30       	cpi	r24, 0x07	; 7
+ 670:	91 05       	cpc	r25, r1
+ 672:	e4 f2       	brlt	.-72     	; 0x62c <Display6LED+0xe>
+ 674:	08 95       	ret
+
+Disassembly of section .text.CheckKeypad:
+
+000000c0 <CheckKeypad>:
+  c0:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <IsPause>
+  c4:	81 11       	cpse	r24, r1
+  c6:	05 c0       	rjmp	.+10     	; 0xd2 <CheckKeypad+0x12>
+  c8:	80 91 83 00 	lds	r24, 0x0083	; 0x800083 <IsSetTime>
+  cc:	88 23       	and	r24, r24
+  ce:	09 f4       	brne	.+2      	; 0xd2 <CheckKeypad+0x12>
+  d0:	d3 c0       	rjmp	.+422    	; 0x278 <__EEPROM_REGION_LENGTH__+0x78>
+  d2:	10 92 86 00 	sts	0x0086, r1	; 0x800086 <row+0x1>
+  d6:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <row>
+  da:	c6 c0       	rjmp	.+396    	; 0x268 <__EEPROM_REGION_LENGTH__+0x68>
+  dc:	81 e0       	ldi	r24, 0x01	; 1
+  de:	90 e0       	ldi	r25, 0x00	; 0
+  e0:	02 c0       	rjmp	.+4      	; 0xe6 <CheckKeypad+0x26>
+  e2:	88 0f       	add	r24, r24
+  e4:	99 1f       	adc	r25, r25
+  e6:	2a 95       	dec	r18
+  e8:	e2 f7       	brpl	.-8      	; 0xe2 <CheckKeypad+0x22>
+  ea:	80 95       	com	r24
+  ec:	85 bb       	out	0x15, r24	; 21
+  ee:	8f e9       	ldi	r24, 0x9F	; 159
+  f0:	9f e0       	ldi	r25, 0x0F	; 15
+  f2:	01 97       	sbiw	r24, 0x01	; 1
+  f4:	f1 f7       	brne	.-4      	; 0xf2 <CheckKeypad+0x32>
+  f6:	00 c0       	rjmp	.+0      	; 0xf8 <CheckKeypad+0x38>
+  f8:	00 00       	nop
+  fa:	83 b3       	in	r24, 0x13	; 19
+  fc:	80 7f       	andi	r24, 0xF0	; 240
+  fe:	90 e0       	ldi	r25, 0x00	; 0
+ 100:	90 93 82 00 	sts	0x0082, r25	; 0x800082 <CheckRow+0x1>
+ 104:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <CheckRow>
+ 108:	80 3f       	cpi	r24, 0xF0	; 240
+ 10a:	91 05       	cpc	r25, r1
+ 10c:	09 f4       	brne	.+2      	; 0x110 <CheckKeypad+0x50>
+ 10e:	a3 c0       	rjmp	.+326    	; 0x256 <__EEPROM_REGION_LENGTH__+0x56>
+ 110:	10 92 70 00 	sts	0x0070, r1	; 0x800070 <col+0x1>
+ 114:	10 92 6f 00 	sts	0x006F, r1	; 0x80006f <col>
+ 118:	92 c0       	rjmp	.+292    	; 0x23e <__EEPROM_REGION_LENGTH__+0x3e>
+ 11a:	a9 01       	movw	r20, r18
+ 11c:	4c 5f       	subi	r20, 0xFC	; 252
+ 11e:	5f 4f       	sbci	r21, 0xFF	; 255
+ 120:	81 e0       	ldi	r24, 0x01	; 1
+ 122:	90 e0       	ldi	r25, 0x00	; 0
+ 124:	02 c0       	rjmp	.+4      	; 0x12a <CheckKeypad+0x6a>
+ 126:	88 0f       	add	r24, r24
+ 128:	99 1f       	adc	r25, r25
+ 12a:	4a 95       	dec	r20
+ 12c:	e2 f7       	brpl	.-8      	; 0x126 <CheckKeypad+0x66>
+ 12e:	80 95       	com	r24
+ 130:	80 7f       	andi	r24, 0xF0	; 240
+ 132:	99 27       	eor	r25, r25
+ 134:	90 93 63 00 	sts	0x0063, r25	; 0x800063 <CheckCol+0x1>
+ 138:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <CheckCol>
+ 13c:	40 91 81 00 	lds	r20, 0x0081	; 0x800081 <CheckRow>
+ 140:	50 91 82 00 	lds	r21, 0x0082	; 0x800082 <CheckRow+0x1>
+ 144:	84 17       	cp	r24, r20
+ 146:	95 07       	cpc	r25, r21
+ 148:	09 f0       	breq	.+2      	; 0x14c <CheckKeypad+0x8c>
+ 14a:	70 c0       	rjmp	.+224    	; 0x22c <__EEPROM_REGION_LENGTH__+0x2c>
+ 14c:	40 91 73 00 	lds	r20, 0x0073	; 0x800073 <mark>
+ 150:	50 91 74 00 	lds	r21, 0x0074	; 0x800074 <mark+0x1>
+ 154:	80 91 85 00 	lds	r24, 0x0085	; 0x800085 <row>
+ 158:	90 91 86 00 	lds	r25, 0x0086	; 0x800086 <row+0x1>
+ 15c:	fc 01       	movw	r30, r24
+ 15e:	ee 0f       	add	r30, r30
+ 160:	ff 1f       	adc	r31, r31
+ 162:	e8 0f       	add	r30, r24
+ 164:	f9 1f       	adc	r31, r25
+ 166:	e2 0f       	add	r30, r18
+ 168:	f3 1f       	adc	r31, r19
+ 16a:	ee 0f       	add	r30, r30
+ 16c:	ff 1f       	adc	r31, r31
+ 16e:	e9 57       	subi	r30, 0x79	; 121
+ 170:	ff 4f       	sbci	r31, 0xFF	; 255
+ 172:	80 81       	ld	r24, Z
+ 174:	91 81       	ldd	r25, Z+1	; 0x01
+ 176:	fa 01       	movw	r30, r20
+ 178:	ee 0f       	add	r30, r30
+ 17a:	ff 1f       	adc	r31, r31
+ 17c:	eb 58       	subi	r30, 0x8B	; 139
+ 17e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 180:	91 83       	std	Z+1, r25	; 0x01
+ 182:	80 83       	st	Z, r24
+ 184:	45 2b       	or	r20, r21
+ 186:	e9 f4       	brne	.+58     	; 0x1c2 <CheckKeypad+0x102>
+ 188:	20 91 83 00 	lds	r18, 0x0083	; 0x800083 <IsSetTime>
+ 18c:	22 23       	and	r18, r18
+ 18e:	c9 f0       	breq	.+50     	; 0x1c2 <CheckKeypad+0x102>
+ 190:	e5 e7       	ldi	r30, 0x75	; 117
+ 192:	f0 e0       	ldi	r31, 0x00	; 0
+ 194:	2a e0       	ldi	r18, 0x0A	; 10
+ 196:	30 e0       	ldi	r19, 0x00	; 0
+ 198:	33 83       	std	Z+3, r19	; 0x03
+ 19a:	22 83       	std	Z+2, r18	; 0x02
+ 19c:	35 83       	std	Z+5, r19	; 0x05
+ 19e:	24 83       	std	Z+4, r18	; 0x04
+ 1a0:	37 83       	std	Z+7, r19	; 0x07
+ 1a2:	26 83       	std	Z+6, r18	; 0x06
+ 1a4:	31 87       	std	Z+9, r19	; 0x09
+ 1a6:	20 87       	std	Z+8, r18	; 0x08
+ 1a8:	33 87       	std	Z+11, r19	; 0x0b
+ 1aa:	22 87       	std	Z+10, r18	; 0x0a
+ 1ac:	20 81       	ld	r18, Z
+ 1ae:	31 81       	ldd	r19, Z+1	; 0x01
+ 1b0:	2a 30       	cpi	r18, 0x0A	; 10
+ 1b2:	31 05       	cpc	r19, r1
+ 1b4:	31 f4       	brne	.+12     	; 0x1c2 <CheckKeypad+0x102>
+ 1b6:	2f ef       	ldi	r18, 0xFF	; 255
+ 1b8:	3f ef       	ldi	r19, 0xFF	; 255
+ 1ba:	30 93 74 00 	sts	0x0074, r19	; 0x800074 <mark+0x1>
+ 1be:	20 93 73 00 	sts	0x0073, r18	; 0x800073 <mark>
+ 1c2:	8a 30       	cpi	r24, 0x0A	; 10
+ 1c4:	91 05       	cpc	r25, r1
+ 1c6:	a9 f4       	brne	.+42     	; 0x1f2 <CheckKeypad+0x132>
+ 1c8:	20 91 73 00 	lds	r18, 0x0073	; 0x800073 <mark>
+ 1cc:	30 91 74 00 	lds	r19, 0x0074	; 0x800074 <mark+0x1>
+ 1d0:	12 16       	cp	r1, r18
+ 1d2:	13 06       	cpc	r1, r19
+ 1d4:	74 f4       	brge	.+28     	; 0x1f2 <CheckKeypad+0x132>
+ 1d6:	21 50       	subi	r18, 0x01	; 1
+ 1d8:	31 09       	sbc	r19, r1
+ 1da:	30 93 74 00 	sts	0x0074, r19	; 0x800074 <mark+0x1>
+ 1de:	20 93 73 00 	sts	0x0073, r18	; 0x800073 <mark>
+ 1e2:	22 0f       	add	r18, r18
+ 1e4:	33 1f       	adc	r19, r19
+ 1e6:	f9 01       	movw	r30, r18
+ 1e8:	eb 58       	subi	r30, 0x8B	; 139
+ 1ea:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1ec:	91 83       	std	Z+1, r25	; 0x01
+ 1ee:	80 83       	st	Z, r24
+ 1f0:	1d c0       	rjmp	.+58     	; 0x22c <__EEPROM_REGION_LENGTH__+0x2c>
+ 1f2:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <mark>
+ 1f6:	90 91 74 00 	lds	r25, 0x0074	; 0x800074 <mark+0x1>
+ 1fa:	85 30       	cpi	r24, 0x05	; 5
+ 1fc:	91 05       	cpc	r25, r1
+ 1fe:	89 f4       	brne	.+34     	; 0x222 <__EEPROM_REGION_LENGTH__+0x22>
+ 200:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <IsPause>
+ 204:	88 23       	and	r24, r24
+ 206:	21 f0       	breq	.+8      	; 0x210 <__EEPROM_REGION_LENGTH__+0x10>
+ 208:	0e 94 1b 02 	call	0x436	; 0x436 <UpdateTime>
+ 20c:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <IsPause>
+ 210:	80 91 83 00 	lds	r24, 0x0083	; 0x800083 <IsSetTime>
+ 214:	88 23       	and	r24, r24
+ 216:	51 f0       	breq	.+20     	; 0x22c <__EEPROM_REGION_LENGTH__+0x2c>
+ 218:	0e 94 6d 02 	call	0x4da	; 0x4da <UpdateSetTime>
+ 21c:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <IsSetTime>
+ 220:	05 c0       	rjmp	.+10     	; 0x22c <__EEPROM_REGION_LENGTH__+0x2c>
+ 222:	01 96       	adiw	r24, 0x01	; 1
+ 224:	90 93 74 00 	sts	0x0074, r25	; 0x800074 <mark+0x1>
+ 228:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <mark>
+ 22c:	80 91 6f 00 	lds	r24, 0x006F	; 0x80006f <col>
+ 230:	90 91 70 00 	lds	r25, 0x0070	; 0x800070 <col+0x1>
+ 234:	01 96       	adiw	r24, 0x01	; 1
+ 236:	90 93 70 00 	sts	0x0070, r25	; 0x800070 <col+0x1>
+ 23a:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <col>
+ 23e:	20 91 6f 00 	lds	r18, 0x006F	; 0x80006f <col>
+ 242:	30 91 70 00 	lds	r19, 0x0070	; 0x800070 <col+0x1>
+ 246:	23 30       	cpi	r18, 0x03	; 3
+ 248:	31 05       	cpc	r19, r1
+ 24a:	0c f4       	brge	.+2      	; 0x24e <__EEPROM_REGION_LENGTH__+0x4e>
+ 24c:	66 cf       	rjmp	.-308    	; 0x11a <CheckKeypad+0x5a>
+ 24e:	83 b3       	in	r24, 0x13	; 19
+ 250:	80 7f       	andi	r24, 0xF0	; 240
+ 252:	80 3f       	cpi	r24, 0xF0	; 240
+ 254:	e1 f7       	brne	.-8      	; 0x24e <__EEPROM_REGION_LENGTH__+0x4e>
+ 256:	80 91 85 00 	lds	r24, 0x0085	; 0x800085 <row>
+ 25a:	90 91 86 00 	lds	r25, 0x0086	; 0x800086 <row+0x1>
+ 25e:	01 96       	adiw	r24, 0x01	; 1
+ 260:	90 93 86 00 	sts	0x0086, r25	; 0x800086 <row+0x1>
+ 264:	80 93 85 00 	sts	0x0085, r24	; 0x800085 <row>
+ 268:	20 91 85 00 	lds	r18, 0x0085	; 0x800085 <row>
+ 26c:	30 91 86 00 	lds	r19, 0x0086	; 0x800086 <row+0x1>
+ 270:	24 30       	cpi	r18, 0x04	; 4
+ 272:	31 05       	cpc	r19, r1
+ 274:	0c f4       	brge	.+2      	; 0x278 <__EEPROM_REGION_LENGTH__+0x78>
+ 276:	32 cf       	rjmp	.-412    	; 0xdc <CheckKeypad+0x1c>
+ 278:	08 95       	ret
+
+Disassembly of section .text.__vector_8:
+
+0000027a <__vector_8>:
+ 27a:	1f 92       	push	r1
+ 27c:	0f 92       	push	r0
+ 27e:	0f b6       	in	r0, 0x3f	; 63
+ 280:	0f 92       	push	r0
+ 282:	11 24       	eor	r1, r1
+ 284:	2f 93       	push	r18
+ 286:	3f 93       	push	r19
+ 288:	4f 93       	push	r20
+ 28a:	5f 93       	push	r21
+ 28c:	6f 93       	push	r22
+ 28e:	7f 93       	push	r23
+ 290:	8f 93       	push	r24
+ 292:	9f 93       	push	r25
+ 294:	af 93       	push	r26
+ 296:	bf 93       	push	r27
+ 298:	ef 93       	push	r30
+ 29a:	ff 93       	push	r31
+ 29c:	85 e8       	ldi	r24, 0x85	; 133
+ 29e:	8d bd       	out	0x2d, r24	; 45
+ 2a0:	8d ee       	ldi	r24, 0xED	; 237
+ 2a2:	8c bd       	out	0x2c, r24	; 44
+ 2a4:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <IsPause>
+ 2a8:	81 11       	cpse	r24, r1
+ 2aa:	5f c0       	rjmp	.+190    	; 0x36a <__vector_8+0xf0>
+ 2ac:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <second>
+ 2b0:	90 91 68 00 	lds	r25, 0x0068	; 0x800068 <second+0x1>
+ 2b4:	01 96       	adiw	r24, 0x01	; 1
+ 2b6:	6c e3       	ldi	r22, 0x3C	; 60
+ 2b8:	70 e0       	ldi	r23, 0x00	; 0
+ 2ba:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 2be:	9c 01       	movw	r18, r24
+ 2c0:	90 93 68 00 	sts	0x0068, r25	; 0x800068 <second+0x1>
+ 2c4:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <second>
+ 2c8:	89 2b       	or	r24, r25
+ 2ca:	e1 f4       	brne	.+56     	; 0x304 <__vector_8+0x8a>
+ 2cc:	80 91 6b 00 	lds	r24, 0x006B	; 0x80006b <minute>
+ 2d0:	90 91 6c 00 	lds	r25, 0x006C	; 0x80006c <minute+0x1>
+ 2d4:	01 96       	adiw	r24, 0x01	; 1
+ 2d6:	6c e3       	ldi	r22, 0x3C	; 60
+ 2d8:	70 e0       	ldi	r23, 0x00	; 0
+ 2da:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 2de:	90 93 6c 00 	sts	0x006C, r25	; 0x80006c <minute+0x1>
+ 2e2:	80 93 6b 00 	sts	0x006B, r24	; 0x80006b <minute>
+ 2e6:	89 2b       	or	r24, r25
+ 2e8:	69 f4       	brne	.+26     	; 0x304 <__vector_8+0x8a>
+ 2ea:	80 91 6d 00 	lds	r24, 0x006D	; 0x80006d <hour>
+ 2ee:	90 91 6e 00 	lds	r25, 0x006E	; 0x80006e <hour+0x1>
+ 2f2:	01 96       	adiw	r24, 0x01	; 1
+ 2f4:	68 e1       	ldi	r22, 0x18	; 24
+ 2f6:	70 e0       	ldi	r23, 0x00	; 0
+ 2f8:	0e 94 fb 03 	call	0x7f6	; 0x7f6 <__divmodhi4>
+ 2fc:	90 93 6e 00 	sts	0x006E, r25	; 0x80006e <hour+0x1>
+ 300:	80 93 6d 00 	sts	0x006D, r24	; 0x80006d <hour>
+ 304:	80 91 83 00 	lds	r24, 0x0083	; 0x800083 <IsSetTime>
+ 308:	81 11       	cpse	r24, r1
+ 30a:	0b c0       	rjmp	.+22     	; 0x322 <__vector_8+0xa8>
+ 30c:	60 91 6b 00 	lds	r22, 0x006B	; 0x80006b <minute>
+ 310:	70 91 6c 00 	lds	r23, 0x006C	; 0x80006c <minute+0x1>
+ 314:	a9 01       	movw	r20, r18
+ 316:	80 91 6d 00 	lds	r24, 0x006D	; 0x80006d <hour>
+ 31a:	90 91 6e 00 	lds	r25, 0x006E	; 0x80006e <hour+0x1>
+ 31e:	0e 94 b9 03 	call	0x772	; 0x772 <ValuePosByTime>
+ 322:	20 91 6d 00 	lds	r18, 0x006D	; 0x80006d <hour>
+ 326:	30 91 6e 00 	lds	r19, 0x006E	; 0x80006e <hour+0x1>
+ 32a:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <setHour>
+ 32e:	90 91 72 00 	lds	r25, 0x0072	; 0x800072 <setHour+0x1>
+ 332:	28 17       	cp	r18, r24
+ 334:	39 07       	cpc	r19, r25
+ 336:	c9 f4       	brne	.+50     	; 0x36a <__vector_8+0xf0>
+ 338:	20 91 6b 00 	lds	r18, 0x006B	; 0x80006b <minute>
+ 33c:	30 91 6c 00 	lds	r19, 0x006C	; 0x80006c <minute+0x1>
+ 340:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <setMinute>
+ 344:	90 91 6a 00 	lds	r25, 0x006A	; 0x80006a <setMinute+0x1>
+ 348:	28 17       	cp	r18, r24
+ 34a:	39 07       	cpc	r19, r25
+ 34c:	71 f4       	brne	.+28     	; 0x36a <__vector_8+0xf0>
+ 34e:	20 91 67 00 	lds	r18, 0x0067	; 0x800067 <second>
+ 352:	30 91 68 00 	lds	r19, 0x0068	; 0x800068 <second+0x1>
+ 356:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 35a:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 35e:	28 17       	cp	r18, r24
+ 360:	39 07       	cpc	r19, r25
+ 362:	19 f4       	brne	.+6      	; 0x36a <__vector_8+0xf0>
+ 364:	82 b3       	in	r24, 0x12	; 18
+ 366:	80 61       	ori	r24, 0x10	; 16
+ 368:	82 bb       	out	0x12, r24	; 18
+ 36a:	ff 91       	pop	r31
+ 36c:	ef 91       	pop	r30
+ 36e:	bf 91       	pop	r27
+ 370:	af 91       	pop	r26
+ 372:	9f 91       	pop	r25
+ 374:	8f 91       	pop	r24
+ 376:	7f 91       	pop	r23
+ 378:	6f 91       	pop	r22
+ 37a:	5f 91       	pop	r21
+ 37c:	4f 91       	pop	r20
+ 37e:	3f 91       	pop	r19
+ 380:	2f 91       	pop	r18
+ 382:	0f 90       	pop	r0
+ 384:	0f be       	out	0x3f, r0	; 63
+ 386:	0f 90       	pop	r0
+ 388:	1f 90       	pop	r1
+ 38a:	18 95       	reti
+
+Disassembly of section .text.__vector_1:
+
+0000057e <__vector_1>:
+ 57e:	1f 92       	push	r1
+ 580:	0f 92       	push	r0
+ 582:	0f b6       	in	r0, 0x3f	; 63
+ 584:	0f 92       	push	r0
+ 586:	11 24       	eor	r1, r1
+ 588:	2f 93       	push	r18
+ 58a:	3f 93       	push	r19
+ 58c:	4f 93       	push	r20
+ 58e:	5f 93       	push	r21
+ 590:	6f 93       	push	r22
+ 592:	7f 93       	push	r23
+ 594:	8f 93       	push	r24
+ 596:	9f 93       	push	r25
+ 598:	af 93       	push	r26
+ 59a:	bf 93       	push	r27
+ 59c:	ef 93       	push	r30
+ 59e:	ff 93       	push	r31
+ 5a0:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <IsPause>
+ 5a4:	81 11       	cpse	r24, r1
+ 5a6:	1a c0       	rjmp	.+52     	; 0x5dc <__vector_1+0x5e>
+ 5a8:	81 e0       	ldi	r24, 0x01	; 1
+ 5aa:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <IsPause>
+ 5ae:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <IsSetTime>
+ 5b2:	10 92 74 00 	sts	0x0074, r1	; 0x800074 <mark+0x1>
+ 5b6:	10 92 73 00 	sts	0x0073, r1	; 0x800073 <mark>
+ 5ba:	e5 e7       	ldi	r30, 0x75	; 117
+ 5bc:	f0 e0       	ldi	r31, 0x00	; 0
+ 5be:	8a e0       	ldi	r24, 0x0A	; 10
+ 5c0:	90 e0       	ldi	r25, 0x00	; 0
+ 5c2:	91 83       	std	Z+1, r25	; 0x01
+ 5c4:	80 83       	st	Z, r24
+ 5c6:	93 83       	std	Z+3, r25	; 0x03
+ 5c8:	82 83       	std	Z+2, r24	; 0x02
+ 5ca:	95 83       	std	Z+5, r25	; 0x05
+ 5cc:	84 83       	std	Z+4, r24	; 0x04
+ 5ce:	97 83       	std	Z+7, r25	; 0x07
+ 5d0:	86 83       	std	Z+6, r24	; 0x06
+ 5d2:	91 87       	std	Z+9, r25	; 0x09
+ 5d4:	80 87       	std	Z+8, r24	; 0x08
+ 5d6:	93 87       	std	Z+11, r25	; 0x0b
+ 5d8:	82 87       	std	Z+10, r24	; 0x0a
+ 5da:	10 c0       	rjmp	.+32     	; 0x5fc <__vector_1+0x7e>
+ 5dc:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <IsPause>
+ 5e0:	40 91 67 00 	lds	r20, 0x0067	; 0x800067 <second>
+ 5e4:	50 91 68 00 	lds	r21, 0x0068	; 0x800068 <second+0x1>
+ 5e8:	60 91 6b 00 	lds	r22, 0x006B	; 0x80006b <minute>
+ 5ec:	70 91 6c 00 	lds	r23, 0x006C	; 0x80006c <minute+0x1>
+ 5f0:	80 91 6d 00 	lds	r24, 0x006D	; 0x80006d <hour>
+ 5f4:	90 91 6e 00 	lds	r25, 0x006E	; 0x80006e <hour+0x1>
+ 5f8:	0e 94 b9 03 	call	0x772	; 0x772 <ValuePosByTime>
+ 5fc:	ff 91       	pop	r31
+ 5fe:	ef 91       	pop	r30
+ 600:	bf 91       	pop	r27
+ 602:	af 91       	pop	r26
+ 604:	9f 91       	pop	r25
+ 606:	8f 91       	pop	r24
+ 608:	7f 91       	pop	r23
+ 60a:	6f 91       	pop	r22
+ 60c:	5f 91       	pop	r21
+ 60e:	4f 91       	pop	r20
+ 610:	3f 91       	pop	r19
+ 612:	2f 91       	pop	r18
+ 614:	0f 90       	pop	r0
+ 616:	0f be       	out	0x3f, r0	; 63
+ 618:	0f 90       	pop	r0
+ 61a:	1f 90       	pop	r1
+ 61c:	18 95       	reti
+
+Disassembly of section .text.__vector_2:
+
+0000038c <__vector_2>:
+ 38c:	1f 92       	push	r1
+ 38e:	0f 92       	push	r0
+ 390:	0f b6       	in	r0, 0x3f	; 63
+ 392:	0f 92       	push	r0
+ 394:	11 24       	eor	r1, r1
+ 396:	2f 93       	push	r18
+ 398:	3f 93       	push	r19
+ 39a:	4f 93       	push	r20
+ 39c:	5f 93       	push	r21
+ 39e:	6f 93       	push	r22
+ 3a0:	7f 93       	push	r23
+ 3a2:	8f 93       	push	r24
+ 3a4:	9f 93       	push	r25
+ 3a6:	af 93       	push	r26
+ 3a8:	bf 93       	push	r27
+ 3aa:	ef 93       	push	r30
+ 3ac:	ff 93       	push	r31
+ 3ae:	80 91 83 00 	lds	r24, 0x0083	; 0x800083 <IsSetTime>
+ 3b2:	81 11       	cpse	r24, r1
+ 3b4:	1f c0       	rjmp	.+62     	; 0x3f4 <__vector_2+0x68>
+ 3b6:	81 e0       	ldi	r24, 0x01	; 1
+ 3b8:	80 93 83 00 	sts	0x0083, r24	; 0x800083 <IsSetTime>
+ 3bc:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <IsPause>
+ 3c0:	10 92 74 00 	sts	0x0074, r1	; 0x800074 <mark+0x1>
+ 3c4:	10 92 73 00 	sts	0x0073, r1	; 0x800073 <mark>
+ 3c8:	40 91 60 00 	lds	r20, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 3cc:	50 91 61 00 	lds	r21, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 3d0:	60 91 69 00 	lds	r22, 0x0069	; 0x800069 <setMinute>
+ 3d4:	70 91 6a 00 	lds	r23, 0x006A	; 0x80006a <setMinute+0x1>
+ 3d8:	80 91 71 00 	lds	r24, 0x0071	; 0x800071 <setHour>
+ 3dc:	90 91 72 00 	lds	r25, 0x0072	; 0x800072 <setHour+0x1>
+ 3e0:	0e 94 b9 03 	call	0x772	; 0x772 <ValuePosByTime>
+ 3e4:	84 9b       	sbis	0x10, 4	; 16
+ 3e6:	16 c0       	rjmp	.+44     	; 0x414 <__DATA_REGION_LENGTH__+0x14>
+ 3e8:	82 b3       	in	r24, 0x12	; 18
+ 3ea:	8f 7e       	andi	r24, 0xEF	; 239
+ 3ec:	82 bb       	out	0x12, r24	; 18
+ 3ee:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <IsSetTime>
+ 3f2:	10 c0       	rjmp	.+32     	; 0x414 <__DATA_REGION_LENGTH__+0x14>
+ 3f4:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <IsSetTime>
+ 3f8:	40 91 67 00 	lds	r20, 0x0067	; 0x800067 <second>
+ 3fc:	50 91 68 00 	lds	r21, 0x0068	; 0x800068 <second+0x1>
+ 400:	60 91 6b 00 	lds	r22, 0x006B	; 0x80006b <minute>
+ 404:	70 91 6c 00 	lds	r23, 0x006C	; 0x80006c <minute+0x1>
+ 408:	80 91 6d 00 	lds	r24, 0x006D	; 0x80006d <hour>
+ 40c:	90 91 6e 00 	lds	r25, 0x006E	; 0x80006e <hour+0x1>
+ 410:	0e 94 b9 03 	call	0x772	; 0x772 <ValuePosByTime>
+ 414:	ff 91       	pop	r31
+ 416:	ef 91       	pop	r30
+ 418:	bf 91       	pop	r27
+ 41a:	af 91       	pop	r26
+ 41c:	9f 91       	pop	r25
+ 41e:	8f 91       	pop	r24
+ 420:	7f 91       	pop	r23
+ 422:	6f 91       	pop	r22
+ 424:	5f 91       	pop	r21
+ 426:	4f 91       	pop	r20
+ 428:	3f 91       	pop	r19
+ 42a:	2f 91       	pop	r18
+ 42c:	0f 90       	pop	r0
+ 42e:	0f be       	out	0x3f, r0	; 63
+ 430:	0f 90       	pop	r0
+ 432:	1f 90       	pop	r1
+ 434:	18 95       	reti
+
+Disassembly of section .text.main:
+
+0000089a <main>:
+ 89a:	0e 94 91 03 	call	0x722	; 0x722 <Start>
+ 89e:	0e 94 0f 03 	call	0x61e	; 0x61e <Display6LED>
+ 8a2:	0e 94 60 00 	call	0xc0	; 0xc0 <CheckKeypad>
+ 8a6:	fb cf       	rjmp	.-10     	; 0x89e <main+0x4>
+
+Disassembly of section .text.libgcc.div:
+
+000007f6 <__divmodhi4>:
+ 7f6:	97 fb       	bst	r25, 7
+ 7f8:	07 2e       	mov	r0, r23
+ 7fa:	16 f4       	brtc	.+4      	; 0x800 <__divmodhi4+0xa>
+ 7fc:	00 94       	com	r0
+ 7fe:	07 d0       	rcall	.+14     	; 0x80e <__divmodhi4_neg1>
+ 800:	77 fd       	sbrc	r23, 7
+ 802:	09 d0       	rcall	.+18     	; 0x816 <__divmodhi4_neg2>
+ 804:	0e 94 0f 04 	call	0x81e	; 0x81e <__udivmodhi4>
+ 808:	07 fc       	sbrc	r0, 7
+ 80a:	05 d0       	rcall	.+10     	; 0x816 <__divmodhi4_neg2>
+ 80c:	3e f4       	brtc	.+14     	; 0x81c <__divmodhi4_exit>
+
+0000080e <__divmodhi4_neg1>:
+ 80e:	90 95       	com	r25
+ 810:	81 95       	neg	r24
+ 812:	9f 4f       	sbci	r25, 0xFF	; 255
+ 814:	08 95       	ret
+
+00000816 <__divmodhi4_neg2>:
+ 816:	70 95       	com	r23
+ 818:	61 95       	neg	r22
+ 81a:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000081c <__divmodhi4_exit>:
+ 81c:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+0000081e <__udivmodhi4>:
+ 81e:	aa 1b       	sub	r26, r26
+ 820:	bb 1b       	sub	r27, r27
+ 822:	51 e1       	ldi	r21, 0x11	; 17
+ 824:	07 c0       	rjmp	.+14     	; 0x834 <__udivmodhi4_ep>
+
+00000826 <__udivmodhi4_loop>:
+ 826:	aa 1f       	adc	r26, r26
+ 828:	bb 1f       	adc	r27, r27
+ 82a:	a6 17       	cp	r26, r22
+ 82c:	b7 07       	cpc	r27, r23
+ 82e:	10 f0       	brcs	.+4      	; 0x834 <__udivmodhi4_ep>
+ 830:	a6 1b       	sub	r26, r22
+ 832:	b7 0b       	sbc	r27, r23
+
+00000834 <__udivmodhi4_ep>:
+ 834:	88 1f       	adc	r24, r24
+ 836:	99 1f       	adc	r25, r25
+ 838:	5a 95       	dec	r21
+ 83a:	a9 f7       	brne	.-22     	; 0x826 <__udivmodhi4_loop>
+ 83c:	80 95       	com	r24
+ 83e:	90 95       	com	r25
+ 840:	bc 01       	movw	r22, r24
+ 842:	cd 01       	movw	r24, r26
+ 844:	08 95       	ret
+
+Disassembly of section .text.__dummy_fini:
+
+000008bc <_fini>:
+ 8bc:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000008be <__funcs_on_exit>:
+ 8be:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000008c0 <__simulator_exit>:
+ 8c0:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000884 <exit>:
+ 884:	ec 01       	movw	r28, r24
+ 886:	0e 94 5f 04 	call	0x8be	; 0x8be <__funcs_on_exit>
+ 88a:	0e 94 5e 04 	call	0x8bc	; 0x8bc <_fini>
+ 88e:	ce 01       	movw	r24, r28
+ 890:	0e 94 60 04 	call	0x8c0	; 0x8c0 <__simulator_exit>
+ 894:	ce 01       	movw	r24, r28
+ 896:	0e 94 5c 04 	call	0x8b8	; 0x8b8 <_Exit>
+
+Disassembly of section .text._Exit:
+
+000008b8 <_Exit>:
+ 8b8:	0e 94 58 00 	call	0xb0	; 0xb0 <_exit>

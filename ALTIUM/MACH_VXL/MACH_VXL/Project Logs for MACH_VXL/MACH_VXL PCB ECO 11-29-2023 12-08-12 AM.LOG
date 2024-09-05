@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=H0 Pin=IC1-22
+Added Pin To Net: NetName=H1 Pin=IC1-23
+Added Pin To Net: NetName=H2 Pin=IC1-24
+Added Pin To Net: NetName=H3 Pin=IC1-25
+Added Pin To Net: NetName=C0 Pin=IC1-26
+Added Pin To Net: NetName=C1 Pin=IC1-27
+Added Pin To Net: NetName=C2 Pin=IC1-28
+Added Room: Name=MACH_VXL

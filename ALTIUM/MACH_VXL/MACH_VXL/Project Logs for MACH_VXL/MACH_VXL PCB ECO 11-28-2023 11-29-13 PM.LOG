@@ -1,0 +1,4 @@
+Added Component: Designator=DS1(7SEGS)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "LED 7S SEG"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=MACH_VXL Member=Component DS1 7SEG S

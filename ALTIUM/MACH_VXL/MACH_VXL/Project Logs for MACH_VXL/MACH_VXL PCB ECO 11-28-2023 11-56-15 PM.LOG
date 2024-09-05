@@ -1,0 +1,188 @@
+Added Component: Designator=D1(LED7SEG-4-0.36)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Category"; Value = "LED"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompanyID"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MFR"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MFR_URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PinCount"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Solder"; Value = "WAVE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D2(LED7SEG-4-0.36)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Category"; Value = "LED"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompanyID"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MFR"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MFR_URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PinCount"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Solder"; Value = "WAVE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=IC1(DIP40/W0.6)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "Atmega 16L"; VariantName = "[No Variations]"
+Added Component: Designator=JP1(HED2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Class"; Value = "Connector"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=JP2(HED2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Class"; Value = "Connector"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(QTO-92)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = ""; Value = "C2383"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "C1815"; VariantName = "[No Variations]"
+Added Component: Designator=R1(R1/4W)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "R1/4W - 1K"; VariantName = "[No Variations]"
+Added Component: Designator=R2(R1/4W)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "R1/4W - 1K"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW3(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW4(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW5(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW6(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW7(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW8(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW9(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW10(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW11(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW12(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW13(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW14(SW2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "SW chip 2 pin"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=E Pin=D1-1
+Added Pin To Net: NetName=D Pin=D1-2
+Added Pin To Net: NetName=DP Pin=D1-3
+Added Pin To Net: NetName=C Pin=D1-4
+Added Pin To Net: NetName=G Pin=D1-5
+Added Pin To Net: NetName=L2 Pin=D1-6
+Added Pin To Net: NetName=B Pin=D1-7
+Added Pin To Net: NetName=L1 Pin=D1-8
+Added Pin To Net: NetName=F Pin=D1-10
+Added Pin To Net: NetName=A Pin=D1-11
+Added Pin To Net: NetName=E Pin=D2-1
+Added Pin To Net: NetName=D Pin=D2-2
+Added Pin To Net: NetName=DP Pin=D2-3
+Added Pin To Net: NetName=C Pin=D2-4
+Added Pin To Net: NetName=G Pin=D2-5
+Added Pin To Net: NetName=L6 Pin=D2-6
+Added Pin To Net: NetName=B Pin=D2-7
+Added Pin To Net: NetName=L5 Pin=D2-8
+Added Pin To Net: NetName=L4 Pin=D2-9
+Added Pin To Net: NetName=F Pin=D2-10
+Added Pin To Net: NetName=A Pin=D2-11
+Added Pin To Net: NetName=L3 Pin=D2-12
+Added Pin To Net: NetName=L1 Pin=IC1-1
+Added Pin To Net: NetName=L2 Pin=IC1-2
+Added Pin To Net: NetName=L3 Pin=IC1-3
+Added Pin To Net: NetName=L4 Pin=IC1-4
+Added Pin To Net: NetName=L5 Pin=IC1-5
+Added Pin To Net: NetName=L6 Pin=IC1-6
+Added Pin To Net: NetName=VCC Pin=IC1-9
+Added Pin To Net: NetName=VCC Pin=IC1-10
+Added Pin To Net: NetName=GND Pin=IC1-11
+Added Pin To Net: NetName=PAUSE Pin=IC1-16
+Added Pin To Net: NetName=BAO_THUC Pin=IC1-17
+Added Pin To Net: NetName=BELL Pin=IC1-18
+Added Pin To Net: NetName=DP Pin=IC1-33
+Added Pin To Net: NetName=G Pin=IC1-34
+Added Pin To Net: NetName=F Pin=IC1-35
+Added Pin To Net: NetName=E Pin=IC1-36
+Added Pin To Net: NetName=D Pin=IC1-37
+Added Pin To Net: NetName=C Pin=IC1-38
+Added Pin To Net: NetName=B Pin=IC1-39
+Added Pin To Net: NetName=A Pin=IC1-40
+Added Pin To Net: NetName=NetJP1_1 Pin=JP1-1
+Added Pin To Net: NetName=GND Pin=JP1-2
+Added Pin To Net: NetName=GND Pin=JP2-1
+Added Pin To Net: NetName=VCC Pin=JP2-2
+Added Pin To Net: NetName=NetJP1_1 Pin=Q1-1
+Added Pin To Net: NetName=VCC Pin=Q1-2
+Added Pin To Net: NetName=BELL Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=BAO_THUC Pin=R1-2
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=PAUSE Pin=R2-2
+Added Pin To Net: NetName=H0 Pin=SW1-1
+Added Pin To Net: NetName=C0 Pin=SW1-2
+Added Pin To Net: NetName=H0 Pin=SW2-1
+Added Pin To Net: NetName=C1 Pin=SW2-2
+Added Pin To Net: NetName=H0 Pin=SW3-1
+Added Pin To Net: NetName=C2 Pin=SW3-2
+Added Pin To Net: NetName=H1 Pin=SW4-1
+Added Pin To Net: NetName=C0 Pin=SW4-2
+Added Pin To Net: NetName=H1 Pin=SW5-1
+Added Pin To Net: NetName=C1 Pin=SW5-2
+Added Pin To Net: NetName=H1 Pin=SW6-1
+Added Pin To Net: NetName=C2 Pin=SW6-2
+Added Pin To Net: NetName=H2 Pin=SW7-1
+Added Pin To Net: NetName=C0 Pin=SW7-2
+Added Pin To Net: NetName=H2 Pin=SW8-1
+Added Pin To Net: NetName=C1 Pin=SW8-2
+Added Pin To Net: NetName=H2 Pin=SW9-1
+Added Pin To Net: NetName=C2 Pin=SW9-2
+Added Pin To Net: NetName=H3 Pin=SW10-1
+Added Pin To Net: NetName=C0 Pin=SW10-2
+Added Pin To Net: NetName=H3 Pin=SW11-1
+Added Pin To Net: NetName=C1 Pin=SW11-2
+Added Pin To Net: NetName=H3 Pin=SW12-1
+Added Pin To Net: NetName=C2 Pin=SW12-2
+Added Pin To Net: NetName=BAO_THUC Pin=SW13-1
+Added Pin To Net: NetName=VCC Pin=SW13-2
+Added Pin To Net: NetName=PAUSE Pin=SW14-1
+Added Pin To Net: NetName=VCC Pin=SW14-2
+Added Member To Class: ClassName=MACH_VXL Member=Component D1 
+Added Member To Class: ClassName=MACH_VXL Member=Component D2 
+Added Member To Class: ClassName=MACH_VXL Member=Component IC1 ATMEL 16L
+Added Member To Class: ClassName=MACH_VXL Member=Component JP1 Header 2_1
+Added Member To Class: ClassName=MACH_VXL Member=Component JP2 Header 2_1
+Added Member To Class: ClassName=MACH_VXL Member=Component Q1 C1815
+Added Member To Class: ClassName=MACH_VXL Member=Component R1 1k
+Added Member To Class: ClassName=MACH_VXL Member=Component R2 1k
+Added Member To Class: ClassName=MACH_VXL Member=Component SW1 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW2 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW3 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW4 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW5 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW6 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW7 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW8 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW9 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW10 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW11 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW12 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW13 SW
+Added Member To Class: ClassName=MACH_VXL Member=Component SW14 SW
